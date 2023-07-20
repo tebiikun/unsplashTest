@@ -1,0 +1,166 @@
+.divMasInformacion{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(24, 23, 23, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  .fondo{
+    width: 70%;
+    background-color: white;
+    padding:5% ;
+    border-radius: 0.3rem;
+  }
+  
+  .containerFotoYDetalles{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding-right: 0rem;
+    padding-left: 0rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    background: linear-gradient(222deg, rgba(213,157,37,1) 0%, rgba(126,34,195,1) 100%);
+  }
+  
+  .containerFoto{
+    width: 60%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  
+  .containerDescripcion{
+    font-size: medium;
+    width: 40%;
+    margin:3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .titulosPrevisualizacion, .linksEstadisticas{
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+  }
+  
+  .propiedadesPrevisualizacion{
+    font-weight: normal;
+  }
+  
+  .contIconos{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .containerYEstadisticas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iconos{
+    margin-right: 1%;
+    height: 1.5rem;
+  }
+  
+  .linkDescargaBox{
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .linkDescargaBox a{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    outline: none;
+    background-color: blue;
+    color: white;
+  }
+  
+  .css-button-gradient--9 {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image: linear-gradient(315deg, #833ab4 0%, #fd1d1d 50%, #fcb045);
+  }
+  .css-button-gradient--9:hover {
+    background-position: right center;
+    transform: scale(1.05);
+  }
+  .css-button-gradient--9:active {
+    top: 2px;
+  }
+  
+  .btnCerrarContainer{
+    position: absolute;
+    top:3%;
+    right: 1.5%;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px){
+    .containerFotoYDetalles{
+      display: flex;
+      flex-direction: column;
+      border-radius: 1.5rem;
+    }
+  
+    .fondo{
+      width: 80%;
+    }
+  
+    .containerDescripcion{
+      width: 95%;
+    }
+  
+    .containerFoto{
+      width: 100%;
+    } 
+  
+    .contIconos{
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .fondo{
+      width: 90%;
+    }
+  
+    .containerFotoYDetalles{
+      width: 100%;  
+    }
+  
+    .containerDescripcion{
+      width: 90%;
+      margin:1rem;
+      
+    }
+  
+    .containerFoto{
+      width: 100%;
+    } 
+  }
+  
