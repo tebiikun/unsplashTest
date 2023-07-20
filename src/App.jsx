@@ -11,6 +11,8 @@ export const ContextoPadre = React.createContext()
 
 function App() {
 
+  /* Creacion de variables de estado */
+
   const [valor,setValor]=useState('')
   const [arrayRandom, setArrayRandom]=useState([])
   const [arrayBusqueda, setArrayBusqueda]=useState([])
@@ -27,6 +29,8 @@ function App() {
   const [camara, setCamara]=useState('')
   const [descripcion, setDescripcion]=useState('')
   const [nombreFotografo, setNombreFotografo]=useState('')
+
+  /* Funcion que ejecuta el random al iniciar la app */
   
   useEffect(()=>{
     const imgRandom = async ()=>{
@@ -36,12 +40,14 @@ function App() {
       const respuesta = await fetch(URL)
       const data = await respuesta.json()
       setArrayRandom(data)
-      console.log('Esto es lo que esta trayendo la api en la funcion random:', data)
      
     }
 
     imgRandom()
+
   },[])
+
+  /* Funcion que busca la imagen */
 
   const buscarImg = async (buscarImagen)=>{
 
@@ -61,10 +67,12 @@ function App() {
     setArrayBusqueda(data.results)
     setOcultarRandom(false)
     setPagina(2)
-    console.log('Esto es lo que esta trayendo la api en la funcion busqueda:', data.results)
-    console.log('Esta es la longitudo de lo que tiene array results:', arrayBusqueda.length)
+  
     data.results.length==0?setBusquedaError(2):setBusquedaError(1)
+
   }
+
+  /* Funcion que realiza el scroll infinito */
 
   useEffect(()=>{
     const sigPagina = async ()=>{
@@ -83,6 +91,8 @@ function App() {
     sigPagina()
 
   },[pagina])
+
+  /* Funcion que pasa el id, con el cual podemos usar la previsualizacion de un objeto especifico */
 
   const pasarId = async (idFotografia)=>{
 
@@ -105,6 +115,8 @@ function App() {
     console.log(descarga)
      
 }
+
+  /* Creo el objeto que transforma a los estados en estados globales usando useContext */
 
   const varContexto = {valor,setValor,arrayRandom,setArrayRandom,arrayBusqueda,setArrayBusqueda,ocultarRandom,setOcultarRandom,pagina,setPagina
   ,busquedaError,setBusquedaError,descarga,setDescarga,pais,setPais,likes,setLikes,vistas,setVistas,descargaCantidad,setDescargaCantidad
