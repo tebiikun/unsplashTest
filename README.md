@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+Buscador de imagenes 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto realizado en React como trabajo practico final solicitado para la Diplomatura de Desarrollador Front End Developer de la Universidad Teconologica Nacional,
+turno Mañana. El proyecto consiste en una aplicacion que buscar un valor ingresado en un campo de texto, lo cual obtendra como repuesta una cantidad ilimitada 
+de imagenes a disposicion del usuario.
 
-## Available Scripts
+Las consignas solicitadas en el proyecto fueron las siguientes: 
 
-In the project directory, you can run:
+    - El alumno deberá hacer una aplicación en la cual se acceda a la api y obtenga datos de la misma.
 
-### `npm start`
+    - Link de la API usada en este proyecto: https://unsplash.com/documentation.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - El tp debe realizarse en REACT JS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    - La aplicación debe estar subida a github con sus respectivos commits y su readme completo generado y tipiado por el alumno.
 
-### `npm test`
+    - El proyecto debe estar DEPLOYADO en github (el alumno debe investigar el modo de hacer el deploy del proyecto en react).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - la tipografía, colores quedan a elección del alumno.
 
-### `npm run build`
+    - En el input se debe agregar una palabra especifica y nos muestre las fotos relacionadas con esa búsqueda.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - Al ingresar a la aplicación , las imágenes que se mostraran deben ser aleatorias.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    - Debe tener scroll infinito, lo cual significa que cuando se baje se deben cargar mas imágenes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    - La aplicación debe ser totalmente responsive.
 
-### `npm run eject`
+    - Las imágenes finales a visualizar queda a criterio del alumno (tamaños, efectos,imagen con bordes, imágenes en círculos,etc).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    - Debajo de cada imagen se debe visualizar: ubicación de  la fotografía, cámara que se utilizo y ademas etiquetas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    - Las etiquetas dependen de la imagen, estas etiquetas se deben diferenciar con algun estilo (texto en color rojo, formato de piltora, formato de cuadrado).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - Los efectos del hover y o efectos de animaciones son necesarios y quedan a cargo del alumno dar estos efectos (NO SON OPCIONALES).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+La aplicacion consta de las siguientes caracteristicas: 
 
-## Learn More
+    - Busqueda de imagenes a partir de una palabra ingresada.
+    - Si no se ingresa ningun valor, el boton de busqueda queda desabilitado hasta ingresar al menos un caracter.
+    - Si se ingresa un valor el cual no devuelve algun resultado, se mostrara una imagen de error de busqueda.
+    - Al ingresar a la aplicacion esta nos muestra imagenes aleatorias, las cuales poseen la ubicacion donde la fotografia fue realizada y la camara que se utilizo.
+    - Si la busqueda es exitosa esta presentara imagenes con una descripcion, sus respectivas etiquetas (las mismas son funcionales y realizan una busqueda nueva al presionarlas) y un boton de Mas informacion (este boton proporciona al usuario una descripcion, el modelo de camara utlizado, el nombre del fotografo, estadisticas respecto a vistas, me gusta, cantidad de descargas realizadas y un boton de descarga, el cual lleva al usuario al sitio de origen donde se puede realizar la misma). Esta tambien posee un scroll infinito, el cual proporciona imagenes sin limites.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Framework utilizado:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - Bootstrap
+    
+La aplicacion consta de las siguientes dependencias: 
 
-### Code Splitting
+    - react-infinite-scroll-component: Este paquete proporciona el scroll infinito solicitado.
+    - gh-pages: Este paquete me permite realizar el deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Nota: segun la consigna solicitada, se debia incluir el modelo de camara y la ubicacion de la fotografia debajo de la imagen. Debido a que la API de Unsplash proporciona diferentes objetos dependiendo de la peticion realizada (puede ser random, search, por id), estas contienen propiedades diferentes. Como se puede observar al iniciar la aplicacion esta si posee el modelo de camara y su ubicacion, debido a que el objeto devuelto por la peticion random contiene las propiedades solicitadas. En su defecto, al realizar la busqueda, esta nos devuelve un objeto diferente, el cual no cuenta con estas propiedades, por lo cual yo decidi incluir en su lugar una descripcion, las etiquetas solicitadas y un boton con mas informacion. Dicho boton recibe un objeto diferente a los ya mencionados, y a diferencia de estos el mismo posee todas las propiedades solicitadas por la consigna, por lo cual  decidi incluirlas en esta seccion. Contrario a los anteriores, este objeto solo puede ser solicitado de manera unica, por lo cual cada vez que se ingresa a esta seccion, la misma consume una peticion, por lo cual no puede hacerse un arreglo de la misma, ya que consumiria todas las peticiones (solo se dispone de 50 por hora).
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
