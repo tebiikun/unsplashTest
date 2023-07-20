@@ -1,10 +1,10 @@
-Buscador de imagenes 
+# Buscador de imagenes 
 
 Proyecto realizado en React como trabajo practico final solicitado para la Diplomatura de Desarrollador Front End Developer de la Universidad Teconologica Nacional,
 turno Mañana. El proyecto consiste en una aplicacion que buscar un valor ingresado en un campo de texto, lo cual obtendra como repuesta una cantidad ilimitada 
 de imagenes a disposicion del usuario.
 
-Las consignas solicitadas en el proyecto fueron las siguientes: 
+# Las consignas solicitadas en el proyecto fueron las siguientes: 
 
     - El alumno deberá hacer una aplicación en la cual se acceda a la api y obtenga datos de la misma.
 
@@ -34,7 +34,7 @@ Las consignas solicitadas en el proyecto fueron las siguientes:
 
     - Los efectos del hover y o efectos de animaciones son necesarios y quedan a cargo del alumno dar estos efectos (NO SON OPCIONALES).
 
-La aplicacion consta de las siguientes caracteristicas: 
+# La aplicacion consta de las siguientes caracteristicas: 
 
     - Busqueda de imagenes a partir de una palabra ingresada.
     - Si no se ingresa ningun valor, el boton de busqueda queda desabilitado hasta ingresar al menos un caracter.
@@ -42,14 +42,21 @@ La aplicacion consta de las siguientes caracteristicas:
     - Al ingresar a la aplicacion esta nos muestra imagenes aleatorias, las cuales poseen la ubicacion donde la fotografia fue realizada y la camara que se utilizo.
     - Si la busqueda es exitosa esta presentara imagenes con una descripcion, sus respectivas etiquetas (las mismas son funcionales y realizan una busqueda nueva al presionarlas) y un boton de Mas informacion (este boton proporciona al usuario una descripcion, el modelo de camara utlizado, el nombre del fotografo, estadisticas respecto a vistas, me gusta, cantidad de descargas realizadas y un boton de descarga, el cual lleva al usuario al sitio de origen donde se puede realizar la misma). Esta tambien posee un scroll infinito, el cual proporciona imagenes sin limites.
 
-Framework utilizado:
+# Vista previa
+
+  <p align="center"><img src="https://github.com/DanielAlejandro184/probandoGHP/assets/131780864/0c0d425c-a2ec-4f39-b8b9-616b3f55fa76" width="300px" />&ensp;&ensp;&ensp;
+  <img src="https://github.com/DanielAlejandro184/probandoGHP/assets/131780864/2bda247d-be9a-4a67-aa1e-2243249eda9d" width="300px" /><br /><br />
+  <img src="https://github.com/DanielAlejandro184/probandoGHP/assets/131780864/bc9daaf3-b52a-4f49-acad-88e79c9e366d" width="300px" />&ensp;&ensp;&ensp;
+  <img src="https://github.com/DanielAlejandro184/probandoGHP/assets/131780864/4a5277a8-dc90-4a5e-8eee-5306826fe1d6" width="300px" /></p>
+
+# Framework utilizado:
 
     - Bootstrap
     
-La aplicacion consta de las siguientes dependencias: 
+# La aplicacion consta de las siguientes dependencias: 
 
     - react-infinite-scroll-component: Este paquete proporciona el scroll infinito solicitado.
     - gh-pages: Este paquete me permite realizar el deploy
 
-Nota: segun la consigna solicitada, se debia incluir el modelo de camara y la ubicacion de la fotografia debajo de la imagen. Debido a que la API de Unsplash proporciona diferentes objetos dependiendo de la peticion realizada (puede ser random, search, por id), estas contienen propiedades diferentes. Como se puede observar al iniciar la aplicacion esta si posee el modelo de camara y su ubicacion, debido a que el objeto devuelto por la peticion random contiene las propiedades solicitadas. En su defecto, al realizar la busqueda, esta nos devuelve un objeto diferente, el cual no cuenta con estas propiedades, por lo cual yo decidi incluir en su lugar una descripcion, las etiquetas solicitadas y un boton con mas informacion. Dicho boton recibe un objeto diferente a los ya mencionados, y a diferencia de estos el mismo posee todas las propiedades solicitadas por la consigna, por lo cual  decidi incluirlas en esta seccion. Contrario a los anteriores, este objeto solo puede ser solicitado de manera unica, por lo cual cada vez que se ingresa a esta seccion, la misma consume una peticion, por lo cual no puede hacerse un arreglo de la misma, ya que consumiria todas las peticiones (solo se dispone de 50 por hora).
+ **Nota: segun la consigna solicitada, se debia incluir el modelo de camara y la ubicacion de la fotografia debajo de la imagen. Debido a que la API de Unsplash proporciona diferentes objetos dependiendo de la peticion realizada (puede ser random, search, por id), estas contienen propiedades diferentes. Como se puede observar al iniciar la aplicacion esta si posee el modelo de camara y su ubicacion, debido a que el objeto devuelto por la peticion random contiene las propiedades solicitadas. En su defecto, al realizar la busqueda, esta nos devuelve un objeto diferente, el cual no cuenta con estas propiedades, por lo cual yo decidi incluir en su lugar una descripcion, las etiquetas solicitadas y un boton con mas informacion. Dicho boton recibe un objeto diferente a los ya mencionados, y a diferencia de estos el mismo posee todas las propiedades solicitadas por la consigna, por lo cual  decidi incluirlas en esta seccion. Contrario a los anteriores, este objeto solo puede ser solicitado de manera unica, por lo cual cada vez que se ingresa a esta seccion, la misma consume una peticion, por lo cual no puede hacerse un arreglo de la misma, ya que consumiria todas las peticiones (solo se dispone de 50 por hora).** 
 
