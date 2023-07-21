@@ -1,0 +1,24 @@
+.card-class {
+    border: 1px solid #8d8d8d;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container-description {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #8d8d8d;
+}
